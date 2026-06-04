@@ -1,0 +1,10 @@
+# Bloquea los node_modules de cualquier nivel
+echo "**/node_modules/" >> .gitignore
+echo "node_modules/" >> .gitignore
+
+# Bloquea los archivos de ambiente de cualquier nivel por seguridad
+echo "**/.env" >> .gitignore
+echo "**/.env*" >> .gitignore
+
+# Bloquea las carpetas de compilación de Vite
+echo "**/dist/" >> .gitignore

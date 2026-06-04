@@ -1,7 +1,7 @@
 
-const Badge = ({texto}) => {
+const Badge = ({texto,variante="default"}) => {
   return (
-    <span className="badge">{texto}</span>
+    <span className={`badge badge-${variante}`}>{texto}</span>
   )
 }
 

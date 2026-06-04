@@ -1,4 +1,5 @@
 import CancionCard from "./Components/CancionCard"
+import CardGenerica from "./Components/CardGenerica.jsx"
 import {canciones} from "./datos.js"
 
 const App = () => {
@@ -13,6 +14,19 @@ const App = () => {
           />
         ))
       }
+      <div>
+        <CardGenerica>
+          <h2>Soy parte del hijo</h2>
+          <p>Yo tambien soy parte</p>
+        </CardGenerica>
+        <CardGenerica>
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ul>
+        </CardGenerica>
+      </div>
     </div>
   )
 }
