@@ -2,6 +2,9 @@ import { useState } from "react"
 import Panel from "./Components/Panel"
 import { FaPlusCircle,FaMinusCircle } from "react-icons/fa";
 import { GrPowerReset } from "react-icons/gr";
+import FomNombre from "./Components/FomNombre";
+import FormBusqueda from "./Components/FormBusqueda";
+import FormPerfil from "./Components/FormPerfil";
 
 const App = () => {
   const[contador, setContador] = useState(0)
@@ -31,6 +34,12 @@ const App = () => {
       </div>
       <hr />
       <Panel/>
+      <br />
+      <FomNombre/>
+      <br />
+      <FormBusqueda/>
+      <br />
+      <FormPerfil/>
     </div>
   )
 }
