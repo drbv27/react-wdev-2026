@@ -1,12 +1,28 @@
-import { useRef } from "react"
+import { useRef, useState } from "react"
 
 const DemoUseRef = () => {
-    const inputRef = useRef(null) //1. crear la referencia
+  const [estado,setEstado] = useState(0)
+  const inputRef = useRef(null) //1. crear la referencia
+  
 
-    function enfocar(){
-        inputRef.current.focus() //3.usar la referencia de alguna manera
+
+
+
+
+
+
+
+
+
+  function enfocar(){
+    inputRef.current.focus() //3.usar la referencia de alguna manera
+  }
+  
+  function componente({mostrar}){
+    if(mostrar){
+
+      }
     }
-
 
 
   return (

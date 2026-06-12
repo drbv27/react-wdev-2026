@@ -1,33 +1,11 @@
-import { useEffect, useState } from "react"
 import '../App.css'
+import useFetch from '../hooks/useFetch'
+import Loader from './Loader'
 
 const Pokemon = ({pokemon}) => {
-    const[data,setData] = useState({})
-    const[cargando,setCargando] = useState(true)
-    const[error,setError] = useState(null)
+    const {data,loading,error} = useFetch(pokemon.url)
 
-    useEffect(()=>{
-        async function cargar(){
-            try {
-                setCargando(true)
-                const res = await fetch(pokemon.url)
-                if(!res.ok) throw new Error("Hubo error")
-                const data = await res.json()
-                console.log(data)
-                setData(data)
-            } catch (error) {
-                setError(error.message)
-            } finally{
-                setCargando(false)
-            }
-        }
-        cargar()
-    },[])
-
-    /* console.log(pokemon.url)
-    console.log(data) */
-
-    if(cargando) return <p>Cargando...</p>
+    if(loading) return <Loader/>
     if(error) return <p>Error:{error}</p>
 
   return (
