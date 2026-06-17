@@ -2,7 +2,7 @@ import Menu from "./Menu"
 
 const Navbar = ({usuario}) => {
   return (
-    <div>
+    <div className="navbar">
         <Menu usuario={usuario}/>
     </div>
   )

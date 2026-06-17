@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-const CarritoContext = createContext()
+export const CarritoContext = createContext()
 
 export function CarritoProvider({children}){
     const [items, setItems] = useState([])
@@ -36,3 +36,7 @@ export function CarritoProvider({children}){
         </CarritoContext.Provider>
     )
 }
+
+/* export function useCarrito(){
+    return useContext(CarritoContext)
+} */
